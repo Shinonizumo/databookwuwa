@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beranda | WuWa Data Book</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:linear-gradient(to right,#0f2027,#203a43,#2c5364);
+    color:#fff;
+    padding-top:80px;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+    position:fixed;
+    top:0;left:0;
+    width:100%;
+    height:60px;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(6px);
+    border-bottom:2px solid #ff3333;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+}
+
+.clock{
+    color:#ff3333;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:1px;
+    white-space:nowrap;
+}
+
+.nav-right a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+    margin-left:28px;
+    transition:.25s;
+    white-space:nowrap;
+}
+
+.nav-right a:hover{
+    color:#ff3333;
+}
+
+/* ===== HERO (VIDEO BG) ===== */
+.hero{
+    position:relative;
+    min-height:calc(100vh - 80px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+}
+
+.hero video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:0;
+}
+
+/* overlay gelap */
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:1;
+}
+
+.hero h1,
+.hero p,
+.hero .btn{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:42px;
+    color:#ff4444;
+    margin-bottom:15px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.hero p{
+    max-width:600px;
+    color:#ddd;
+    font-size:18px;
+}
+
+.btn{
+    margin-top:25px;
+    background:#ff3333;
+    color:#fff;
+    padding:12px 28px;
+    border-radius:25px;
+    font-weight:bold;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ff5555;
+    transform:scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#111;
+    border-top:2px solid #ff3333;
+    text-align:center;
+    padding:15px;
+    color:#aaa;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="clock" id="clock">00:00:00</div>
+    <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="book.html">Book</a>
+        <a href="form.html">Form</a>
+        <a href="about.html">About</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <video src="vidio1/bg2.mp4" autoplay muted loop playsinline></video>
+
+    <h1>Data Book WuWa</h1>
+    <p>
+        Menampilkan detail karakter Wuthering Waves secara lengkap dan terstruktur.
+    </p>
+    <a href="book.html" class="btn">Lihat Data Book</a>
+</section>
+
+<footer>
+    © 2025 WuWa Data Book | COPYRIGHT | Alvian arkazora,251011701171,01SIFP015
+</footer>
+
+<script>
+function updateClock(){
+    const d = new Date();
+    document.getElementById("clock").textContent =
+        d.toLocaleTimeString("id-ID");
+}
+setInterval(updateClock,1000);
+updateClock();
+</script>
+
+</body>
+</html>
