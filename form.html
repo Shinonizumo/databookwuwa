@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form | WuWa Data Book</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #0a0a0a;
+            color: #fff;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: linear-gradient(90deg, #111, #222, #111);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 40px;
+            border-bottom: 2px solid #ff3333;
+        }
+
+        .nav-left {
+            font-weight: 600;
+            color: #ff4444;
+        }
+
+        .nav-right a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+        }
+
+        .nav-right a:hover {
+            color: #ff3333;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background-color: #111;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 0 18px rgba(255, 51, 51, 0.25);
+        }
+
+        .container h1 {
+            text-align: center;
+            color: #ff4444;
+            margin-bottom: 10px;
+        }
+
+        .container p {
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 35px;
+            font-size: 14px;
+        }
+
+        /* FORM */
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        form input,
+        form textarea,
+        form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 22px;
+            border-radius: 10px;
+            border: none;
+            background-color: #0d0d0d;
+            color: white;
+            font-family: inherit;
+        }
+
+        form input:focus,
+        form textarea:focus,
+        form select:focus {
+            outline: 2px solid #ff3333;
+        }
+
+        textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff3333;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+            font-size: 15px;
+        }
+
+        .btn-submit:hover {
+            background-color: #ff5555;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            padding: 15px;
+            color: #aaa;
+            border-top: 2px solid #ff3333;
+            background-color: #111;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-left">WuWa Data Book</div>
+    <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="book.html">Book</a>
+        <a href="form.html" class="active">Form</a>
+        <a href="about.html">About</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Form Feedback</h1>
+    <p>Kirim saran, request karakter, atau kritik biar databook ini makin solid 🔥</p>
+
+    <form>
+        <label>Nama</label>
+        <input type="text" placeholder="Masukkan nama kalian">
+
+        <label>Email</label>
+        <input type="email" placeholder="email@gmail.com">
+
+        <label>Jenis Pesan</label>
+        <select>
+            <option>Request Karakter</option>
+            <option>Perbaikan Data</option>
+            <option>Saran Tampilan</option>
+            <option>Lainnya</option>
+        </select>
+
+        <label>Pesan</label>
+        <textarea placeholder="Tulis pesan kalian di sini..."></textarea>
+
+        <button class="btn-submit">Kirim</button>
+    </form>
+</div>
+
+<footer>
+    © 2025 WuWa Data Book | COPYRIGHT | Alvian arkazora,251011701171,01SIFP015
+</footer>
+
+</body>
+</html>
